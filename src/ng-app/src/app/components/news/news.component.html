@@ -2,3 +2,12 @@
 <p>
   {{news}}
 </p>
+<div [innerHTML]="Message">
+</div>
+<div>
+  <ul>
+    <li *ngFor="let item of cities">
+      {{item}}
+    </li>
+  </ul>
+</div>
