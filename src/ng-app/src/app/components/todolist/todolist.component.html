@@ -1,0 +1,22 @@
+<div>
+  <input type="text" [(ngModel)]="todoMessage" (keydown)="submitMessage($event)" />
+  <!-- <button (click)="submitMessage()">add</button> -->
+</div>
+<div>
+  <h3>正在进行。。。</h3>
+  <ul>
+    <li *ngFor="let item of list ; index as i" [hidden]="item.status==1">
+        <button  (click)="changeStatus(i)">delete </button>
+        {{item.name}}----<button (click)="deleteItem(i)">delete </button>
+    </li>
+  </ul>
+</div>
+<div>
+  <h3>已经完成</h3>
+  <ul>
+    <li *ngFor="let item of list ; index as i" [hidden]="item.status==0">
+        <button  (click)="changeStatus(i)">change </button>---
+        {{item.name}}----<button (click)="deleteItem(i)">delete </button>
+    </li>
+  </ul>
+</div>
