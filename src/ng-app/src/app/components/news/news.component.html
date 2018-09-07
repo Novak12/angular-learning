@@ -6,8 +6,8 @@
 </div>
 <div>
   <ul>
-    <li *ngFor="let item of cities">
-      {{item}}
+    <li *ngFor="let item of users; index as i">
+      username:{{item.username}}  age:{{item.age}}  index:{{i}}
     </li>
   </ul>
 </div>

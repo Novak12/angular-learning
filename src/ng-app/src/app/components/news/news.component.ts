@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Message } from '@angular/compiler/src/i18n/i18n_ast';
+import { UserService } from "../../service/user.service";
+import { User } from "../../../model/user.model";
 
 @Component({
   selector: 'app-news',
@@ -14,12 +16,15 @@ export class NewsComponent implements OnInit {
   protected address: string;//只能在该类及子类中使用
   Message: string = 'hello';
   public cities: any[]
-  constructor() {
+  public users:User[];
+
+  constructor(uservice: UserService) {
     this.address = 'shanghai';
     this.name = 'jonny';
     this.Message = '<h3>add inner html</h3>';
-
     this.cities = ['shanghai', 'beijing', 'new york'];
+    this.users=uservice.getUsers();
+
   }
 
   ngOnInit() {
