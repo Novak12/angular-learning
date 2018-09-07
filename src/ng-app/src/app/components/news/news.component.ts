@@ -18,7 +18,7 @@ export class NewsComponent implements OnInit {
   public cities: any[]
   public users:User[];
 
-  constructor(uservice: UserService) {
+  constructor(private uservice: UserService) {
     this.address = 'shanghai';
     this.name = 'jonny';
     this.Message = '<h3>add inner html</h3>';
