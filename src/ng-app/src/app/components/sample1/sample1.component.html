@@ -1,6 +1,10 @@
-<div>
+<div><!--父组件与子组件传输数据-->
   <h3>this ic sample1 component</h3>
   {{message}}
-  <input #myInput type="text" [(ngModel)]="message"/>
+  <input #myInput type="text" [(ngModel)]="message" />
   <button (click)="update.emit({text: message})">更新</button>
+</div>
+<div><!--条件判断-->
+  <p *ngIf="flag">this is a flag</p>
+  <button (click)="setFlag($event)">click</button>
 </div>
