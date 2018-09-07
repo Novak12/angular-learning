@@ -1,4 +1,6 @@
 <div>
   <h3>this ic sample1 component</h3>
   {{message}}
+  <input #myInput type="text" [(ngModel)]="message"/>
+  <button (click)="update.emit({text: message})">更新</button>
 </div>

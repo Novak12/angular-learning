@@ -4,7 +4,8 @@
   <app-news></app-news>
 </div>
 <div>
-  <app-sample1 *ngFor="let item of users; index as i;" [message]="item.username"></app-sample1>//父组件向子组件传输消息
+  <app-sample1 *ngFor="let item of users; index as i;" [message]="item.username"
+   (update)="onUpdate(i, $event.text)"></app-sample1><!--//父组件向子组件传输消息-->
 </div>   
 
 

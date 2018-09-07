@@ -8,9 +8,13 @@ import { UserService } from "./service/user.service";
 })
 export class AppComponent {
   title = 'ng-app';
-  users:User[];
+  users: User[];
 
   constructor(private userService: UserService) {
-    this.users=userService.getUsers();
+    this.users = userService.getUsers();
+  }
+
+  onUpdate(id, text) {
+    this.userService.updateUserName(id, text);
   }
 }
