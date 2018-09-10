@@ -12,6 +12,11 @@ export class Sample1Component implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    console.log('get in sample1')
+  }
+
+  ngOnDisdroy(){
+    console.log('out of sample1')
   }
 
   setFlag(event) {

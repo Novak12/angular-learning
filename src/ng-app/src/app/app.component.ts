@@ -7,7 +7,7 @@ import { UserService } from "./service/user.service";
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'ng-app';
+  title = 'Tour of Heroes';
   users: User[];
 
   constructor(private userService: UserService) {

@@ -5,8 +5,10 @@ import { AppComponent } from './app.component';
 import { NewsComponent } from './components/news/news.component';
 import { HeaderComponent } from './components/header/header.component';
 import { UserService } from "./service/user.service";
+import { HeroService } from "./hero.service";
 import { Sample1Component } from './components/sample1/sample1.component';
-import { TodolistComponent } from './components/todolist/todolist.component';
+import { HeroesComponent } from './heroes/heroes.component';
+import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 
 @NgModule({
   declarations: [
@@ -14,13 +16,14 @@ import { TodolistComponent } from './components/todolist/todolist.component';
     NewsComponent,
     HeaderComponent,
     Sample1Component,
-    TodolistComponent
+    HeroesComponent,
+    HeroDetailComponent
   ],
   imports: [
     BrowserModule,
     FormsModule
   ],
-  providers: [UserService],
+  providers: [UserService, HeroService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
