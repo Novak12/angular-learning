@@ -10,6 +10,7 @@ import { Sample1Component } from './components/sample1/sample1.component';
 import { HeroesComponent } from './heroes/heroes.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { AppRoutingModule } from './/app-routing.module';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { AppRoutingModule } from './/app-routing.module';
     HeaderComponent,
     Sample1Component,
     HeroesComponent,
-    HeroDetailComponent
+    HeroDetailComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
